@@ -1,4 +1,5 @@
 import os
+import shutil
 import tkinter as tk
 from tkinter import filedialog
 import customtkinter as ctk
@@ -109,17 +110,29 @@ def process_image():
 def save_image():
     global vegetation_mask, file_path
     if vegetation_mask is not None and file_path is not None:
-        # Create a save path by replacing the input file extension with .png
+        # Create the directories
+        masks_dir = os.path.join(os.path.dirname(file_path), 'masks')
+        masked_images_dir = os.path.join(os.path.dirname(file_path), 'masked_images')
+        
+        # Create directories if they don't exist
+        if not os.path.exists(masks_dir):
+            os.makedirs(masks_dir)
+        if not os.path.exists(masked_images_dir):
+            os.makedirs(masked_images_dir)
+        
+        # Save the binary mask
         base_name = os.path.splitext(os.path.basename(file_path))[0]
-        save_dir = os.path.join(os.path.dirname(file_path), 'masks')
-        
-        # Create the directory if it doesn't exist
-        if not os.path.exists(save_dir):
-            os.makedirs(save_dir)
-        
-        save_path = os.path.join(save_dir, f"{base_name}.png")
+        save_path = os.path.join(masks_dir, f"{base_name}.png")
         cv2.imwrite(save_path, (vegetation_mask * 255).astype(np.uint8))
         print(f"Saved binary mask to {save_path}")
+        
+        # Move the original image to the masked_images directory
+        new_file_path = os.path.join(masked_images_dir, os.path.basename(file_path))
+        shutil.move(file_path, new_file_path)
+        print(f"Moved original image to {new_file_path}")
+        
+        # Update the file path to the new location
+        file_path = new_file_path
 
 # Title
 title_label = ctk.CTkLabel(root, text="NDVI Tree Crown Detection", font=ctk.CTkFont(size=20, weight="bold"))
@@ -164,3 +177,4 @@ boundary_count_label.pack(pady=10)
 
 # Start the GUI loop
 root.mainloop()
+

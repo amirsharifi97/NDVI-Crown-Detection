@@ -3,4 +3,5 @@ This is a simple sattelite imagery tree crown segmentation which uses NDVI tresh
 ![Screenshot (688)](https://github.com/user-attachments/assets/b3c16b78-4ff1-4509-89f1-93cb17cd6a42)
 
 final binary mask:
+
 ![patch_17_6_L-PNN_100](https://github.com/user-attachments/assets/807fb862-6ee9-41b4-a44d-ffd725e22ed2)

@@ -1,4 +1,4 @@
-This is a simple sattelite imagery tree crown segmentation which uses NDVI treshold to segment crowns. at the end it returns crown masks which is useful for data labeling and ground truth production.
+This is a simple sattelite imagery tree crown segmentation which uses NDVI treshold to segment crowns. at the end it returns crown masks which is useful for data labeling and ground truth production.If the loaded file is inappropriate, you can push "Delete File" button and remove it from files directory.
 
 ![Screenshot (691)](https://github.com/user-attachments/assets/1e8ff415-2f46-4c90-bab3-743cecb3786b)
 

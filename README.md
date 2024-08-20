@@ -3,9 +3,11 @@ This is a simple sattelite imagery tree crown segmentation which uses NDVI tresh
 
 ![Screenshot (694)](https://github.com/user-attachments/assets/0fa0f8be-9808-42d6-bd09-575e7579a540)
 
+## delinated Tree Crown 
+
 ![Screenshot (690)](https://github.com/user-attachments/assets/76992b3e-5910-43f9-b95c-1973e60320fe)
 
-final binary mask:
+## binary mask:
 
 
 ![patch_16_42_L-PNN_100](https://github.com/user-attachments/assets/0c9cdc03-ea2d-4e61-85d3-8bc235102ee0)

@@ -1,3 +1,4 @@
+## NDVI Tree Crown Detection
 This is a simple sattelite imagery tree crown segmentation which uses NDVI treshold to segment crowns. at the end it returns crown masks which is useful for data labeling and ground truth production.If the loaded file is inappropriate, you can push "Delete File" button and remove it from files directory. If NDVI doesn't work precise fore tree crown segmentation, you can push "Manual" button. With this MANUAL_ will added to begining of your file name like: MANUAL_patchxxxx.tif , then you can sort these files and lable them manually with other platforms.
 
 ![Screenshot (694)](https://github.com/user-attachments/assets/0fa0f8be-9808-42d6-bd09-575e7579a540)

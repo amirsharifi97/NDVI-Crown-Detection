@@ -5,12 +5,8 @@ This is a simple sattelite imagery tree crown segmentation which uses NDVI tresh
 
 ## delinated Tree Crowns:
 
-![Screenshot (690)](https://github.com/user-attachments/assets/76992b3e-5910-43f9-b95c-1973e60320fe)
+![Screenshot (715)](https://github.com/user-attachments/assets/f4c87fa1-8146-4c42-8612-b6ee59a53bc1)
 
-## binary mask:
-
-
-![patch_16_42_L-PNN_100](https://github.com/user-attachments/assets/0c9cdc03-ea2d-4e61-85d3-8bc235102ee0)
 
 
 This simple code allows you to make binary masks of tree crowns. run this code in your repo and set the treshhold. after you push the save button, the final mask of that image will be saved in maks directory and the original image will be moved to masked_images directory.
